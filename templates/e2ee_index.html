@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>E2EE Anonymous Chat</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/e2ee_style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+    <header>
+
+        <div>
+
+            <h1>E2EE Chat</h1>
+
+            <div id="status">
+                Bağlanıyor...
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main id="messages"></main>
+
+
+    <form id="messageForm">
+
+        <input
+            id="messageInput"
+            type="text"
+            maxlength="1000"
+            autocomplete="off"
+            placeholder="Şifreli mesaj gönder..."
+        >
+
+        <button type="submit">
+            Gönder
+        </button>
+
+    </form>
+
+</div>
+
+
+
+<!-- Kullanıcı adı penceresi -->
+
+<div id="nameModal" class="modal">
+
+    <div class="modalBox">
+
+        <h2>E2EE Chat</h2>
+
+        <p>
+            Bir kullanıcı adı seç.
+        </p>
+
+        <input
+            id="nameInput"
+            type="text"
+            maxlength="24"
+            placeholder="Örn: MaviKedi"
+        >
+
+        <button
+            id="joinButton"
+            type="button"
+        >
+            Katıl
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+
+<script src="/static/e2ee_app.js"></script>
+
+
+</body>
+
+</html>
